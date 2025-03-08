@@ -143,9 +143,12 @@ header nav ul li:last-child a:hover {
 .wrap-img {
     position: relative;
     display: inline-block;
-    padding: 0.5em 2em;
     border: 1.5px solid white;
+    padding: 0.5em 2em;
     border-radius: 0.6em;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .wrap-img::before {
@@ -163,7 +166,11 @@ header nav ul li:last-child a:hover {
 .wrap-img img {
     position: relative;
     z-index: 2;
-    width: 150px;
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+
 }
 
 .wrap-img > h4 {
