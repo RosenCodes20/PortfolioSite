@@ -27,6 +27,8 @@ header {
     align-items: center;
     padding: 1.4em;
     position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 header nav ul {
@@ -70,7 +72,6 @@ header nav ul li:last-child a:hover {
 
 .home {
     background: #FFC196;
-    min-height: 130vh;
 }
 
 .home section > img {
@@ -92,11 +93,11 @@ header nav ul li:last-child a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     gap: 4em;
     flex-wrap: wrap;
     min-height: 55vh;
-
+    
 }
 
 .h2-wrap {
@@ -138,6 +139,7 @@ header nav ul li:last-child a:hover {
     flex-wrap: wrap;
     gap: 2em;
     margin: 0 auto;
+    
 }
 
 .wrap-img {
@@ -173,7 +175,11 @@ header nav ul li:last-child a:hover {
 
 .wrap-img > h4 {
     font-size: 1.1em;
+    
+}
 
+.wrap-img:last-child {
+    margin-bottom: 1.5em;
 }
 
 .img-wrapper {
@@ -192,4 +198,156 @@ header nav ul li:last-child a:hover {
 
 section:last-child  a {
     color: #444;
+}
+
+.about-me {
+    background: #66CDAA;
+    min-height: 60dvh;
+}
+
+.about-me > section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60dvh;
+    
+}
+
+.about-me > section .p-wrapper {
+    max-width: 600px;
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+.about-me > section img {
+    width: 450px;
+    height: 440px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.about-me > .a-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.about-me > .a-wrap a {
+    background: #369;
+    color: white;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    border-radius: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.about-me > .a-wrap a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.a-wrap i {
+    margin-right: 0.5em;
+}
+
+.matrix-gif-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 350px;
+    height: 100;
+    object-fit: cover;
+    transform: rotate(360deg) !important;
+    z-index: 0;
+}
+
+.projects {
+    min-height: 60dvh;
+    background-color: #6667AB;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    min-height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    background: lightgray;
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    background: lightgray;
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+}
+
+.mySlides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background: white;
+    border-radius: 0.5em;
+}
+
+.mySlides p {
+    margin: 1em;
+    text-align: center;
+}
+
+.mySlides img {
+    border-radius: 0.3em;
+}
+
+.a-links-in-project a:first-child {
+    margin-right: 1em;
+}
+
+.a-links-in-project i {
+    padding-right: 0.3em;
+}
+
+.a-links-in-project a {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 0.6em 1em;
+    border-radius: 1em;
+    transition: ease-in-out 0.2s;
+}
+
+.a-links-in-project a:hover {
+    color: #4999F8;
+    transition: ease-in-out 0.3s;
+}
+
+.a-links-in-project {
+    padding-top: 1em;
 }
