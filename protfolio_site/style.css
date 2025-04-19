@@ -290,6 +290,7 @@ section:last-child  a {
     padding: 0.6em 0.9em;
     border-radius: 0.3em;
     cursor: pointer;
+    user-select: none;
 }
 
 .next {
@@ -300,6 +301,7 @@ section:last-child  a {
     padding: 0.6em 0.9em;
     border-radius: 0.3em;
     cursor: pointer;
+    user-select: none;
 }
 
 .prev:hover, .next:hover {
@@ -315,6 +317,11 @@ section:last-child  a {
     padding: 1em;
     background: white;
     border-radius: 0.5em;
+    display: none;
+}
+
+.mySlides:first-child {
+    display: flex;
 }
 
 .mySlides p {
@@ -350,4 +357,19 @@ section:last-child  a {
 
 .a-links-in-project {
     padding-top: 1em;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
 }
