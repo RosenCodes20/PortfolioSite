@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6509/6509613.png">
     <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <script src="copyText.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -18,17 +20,17 @@
         
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Certificates</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contacts">Contact</a></li>
             </ul>
         </nav>
         
     </header>
     
-    <section class="home">
+    <section class="home" id="home">
         
         <section>
             <section>
@@ -44,7 +46,6 @@
             </div>
         </section>
         
-        <!-- <img src="images/matrix_transparent (1).gif" alt="" class="matrix-gif-img"> -->
         
         <section>
             <h2>I can work with:</h2>
@@ -163,7 +164,8 @@
         
     </section>
     
-    <section class="about-me">
+    <section class="about-me" id="about">
+        <h2>About Rosen Ivanov</h2>
         <section>
             <div class="p-wrapper">
                 <p>Hi, I am Rosen Ivanov! I am 16 years old boy from Botevgrad, Bulgaria. I study web programming with django at SoftUni. I want one day to become senior full-stack engineer. I also study programming in programming school. Currently I am a student at NPG po KTS in town Pravets.</p>
@@ -179,7 +181,8 @@
         </div>
     </section>
     
-    <section class="projects">
+    <section class="projects" id="projects">
+        <h2>Rosen Ivanov projects</h2>
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <img src="images/football.png" width="400px" alt="">
@@ -188,7 +191,7 @@
                     <p>Made with Django, used CRUD, authentication with email, authorization and even more interesting things.</p>
                     <p>I love football very much, so I made this one for my Python-Web Module.</p>
                 </div>
-
+                
                 <div class="a-links-in-project">
                     <a href="https://github.com/RosenCodes20/Final-Web-Project" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
                     <a href="https://football-team-manager-a4ftdbe2dvaaffbh.italynorth-01.azurewebsites.net/" target="_blank"><i class="fa-solid fa-eye"></i>Visit Site</a>    
@@ -197,28 +200,28 @@
             
             <div class="mySlides fade">
                 <img src="images/fast_unit.png" width="400" alt="">
-
+                
                 <div class="text">
                     <p>This is the fast unit exercise made by me</p>
                     <p>Its work is to generate a students to teachers who will test students.</p>
                     <p>One of my biggest projects for school, because it will be used for a long time.</p>
                     <p>With that project my journey with getting better started and I am so happy to show it to you :)</p>
                 </div>
-
+                
                 <div class="a-links-in-project">
                     <a href="https://github.com/RosenCodes20/Python-OOP/tree/main/fast_unit" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
                 </div>
             </div>
-
+            
             <div class="mySlides fade">
                 <img src="images/softuniada_project.png" width="400" alt="">
-
+                
                 <div class="text">
                     <p>This is my bottle shop for the competition softuniada.</p>
                     <p>At first I made this for my mother but then liked it and wanted to compete with it.</p>
                     <p>This is one of my biggest project and one that I like the most!</p>
                 </div>
-
+                
                 <div class="a-links-in-project">
                     <a href="https://github.com/RosenCodes20/Python-OOP/tree/main/softuniada_project" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
                 </div>
@@ -227,11 +230,126 @@
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
+        
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+    
+    <section class="certificates" id="certificates">
+        <h2>Rosen Ivanov SoftUni certificates</h2>
+        <div class="certificate-slideshow">
+            <div class="certificateSlides">
+                <img src="images/Programming Fundamentals with Python - September 2023 - Certificate.png" width="400" alt="">
+                <h2>Programming Fundamentals with Python - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/Python Advanced - January 2024 - Certificate.png" width="400" alt="">
+                <h2>Python Advanced - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/Python OOP - February 2024 - Certificate.png" width="400" alt="">
+                <h2>Python OOP - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/PostgreSQL - May 2024 - Certificate.png" width="400" alt="">
+                <h2>PostgreSQL - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/Python ORM - June 2024 - Certificate.png" width="400" alt="">
+                <h2>Python ORM - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/Django Basics - September 2024 - Certificate.png" width="400" alt="">
+                <h2>Django Basics - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/Django Advanced - October 2024 - Certificate.png" width="400" alt="">
+                <h2>Django Advanced - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/HTML & CSS - January 2025 - Certificate.png" width="400" alt="">
+                <h2>HTML & CSS - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <div class="certificateSlides">
+                <img src="images/JS Front-End - February 2025 - Certificate.png" width="400" alt="">
+                <h2>JS Front-End - Rosen Ivanov - 6.00/6.00</h2>
+            </div>
+            
+            <a class="prev" onclick="plusCertificateSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusCertificateSlides(1)">&#10095;</a>
+        </div>
+        
+        <div style="text-align:center">
+            <span class="dots" onclick="currentCertificateSlide(1)"></span>
+            <span class="dots" onclick="currentCertificateSlide(2)"></span>
+            <span class="dots" onclick="currentCertificateSlide(3)"></span>
+            <span class="dots" onclick="currentCertificateSlide(4)"></span>
+            <span class="dots" onclick="currentCertificateSlide(5)"></span>
+            <span class="dots" onclick="currentCertificateSlide(6)"></span>
+            <span class="dots" onclick="currentCertificateSlide(7)"></span>
+            <span class="dots" onclick="currentCertificateSlide(8)"></span>
+            <span class="dots" onclick="currentCertificateSlide(9)"></span>
+        </div>
+    </section>
+    
+    <section class="contacts" id="contacts">
+        <div class="contacts-wrap">
+            <h2>Contact me here</h2>
+            <p>I am free for new talks about work and making projects together, so if you want you can text me here:</p>
+            <div class="a-links">
+                <a href="https://www.instagram.com/rosko.r.i.6/">
+                    <div class="instagram icon">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>Instagram</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.facebook.com/profile.php?id=100019817384349&name=xhp_nt__fb__action__open_user">
+                    <div class="facebook icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Facebook</p>
+                    </div>
+                </a>
+                
+                <a href="" onclick="copyGmail()">
+                    <div class="gmail icon">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Gmail</p>
+                    </div>
+                </a>
+                
+                <a href="" onclick="copyDiscordUsername()">
+                    <div class="discord icon">
+                        <i class="fa-brands fa-discord"></i>
+                        <p>Discord</p>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/RosenCodes20">
+                    <div class="github icon">
+                        <i class="fa-brands fa-github"></i>
+                        <p>Github</p>
+                    </div>
+                </a>
+                
+                <a href="https://snapchat.com/t/zWrj4nPE">
+                    <div class="snapchat icon">
+                        <i class="fa-brands fa-snapchat"></i>
+                        <p>Snapchat</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
     

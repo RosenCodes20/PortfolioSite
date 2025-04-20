@@ -27,32 +27,60 @@ function deleteText() {
 }
 
 document.addEventListener("DOMContentLoaded", typeWriter);
-
+let cIndex = 1;
 let slideIndex = 1;
 showSlides(slideIndex);
 
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "flex";
-  dots[slideIndex-1].className += " active";
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
 }
+
+showCertificateSlides(cIndex);
+
+function plusCertificateSlides(n) {
+    showCertificateSlides(cIndex += n);
+}
+
+function currentCertificateSlide(n) {
+    showCertificateSlides(cIndex = n);
+}
+
+function showCertificateSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("certificateSlides");
+    let dots = document.getElementsByClassName("dots");
+    if (n > slides.length) {cIndex = 1}
+    if (n < 1) {cIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[cIndex-1].style.display = "flex";
+    dots[cIndex-1].className += " active";
+}
+
