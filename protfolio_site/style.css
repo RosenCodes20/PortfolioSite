@@ -528,6 +528,11 @@ section[class] {
     font-size: 2em;
 }
 
+.hamburger {
+    display: none;
+}
+
+
 @media (max-width: 1127px) {
     .h2-wrap {
         margin: 0 auto;
@@ -541,18 +546,45 @@ section[class] {
         justify-content: center;
         margin-bottom: 1em;
     }
-
+    
     .about-me > section {
         flex-direction: column-reverse;
         gap: 0;
     }
-
+    
     .about-me > section img {
         margin: 1.5em 0;
     }
-
+    
     .about-me > section p {
         margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 1050px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: 1.7em;
+    }
+    
+    .h1-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 200px;
+        margin: 0 auto;
     }
 }
 
@@ -569,34 +601,6 @@ section[class] {
     }
     
     .h1-wrapper {
-        
-        max-width: 200px;
-        margin: 0 auto;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 200px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 1000px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    h1 {
-        width: 100%;
-        margin-bottom: 1em;
-    }
-    
-    .h1-wrapper {
-        
         max-width: 200px;
         margin: 0 auto;
     }
@@ -629,23 +633,252 @@ section[class] {
         gap: 1em;
         width: 100%;
     }
-
+    
     .about-me > section {
         flex-direction: column-reverse;
         gap: 0;
     }
-
+    
     .about-me > section img {
         margin: 1.5em 0;
     }
-
+    
     .about-me > section p {
         margin-bottom: 1em;
     }
-
+    
     .contacts-wrap > p {
         text-align: center;
         margin: 0 auto;
+    }
+}
 
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+    }
+    
+    header {
+        display: none;
+    }
+    
+    
+    .checkbox {
+        display: none;
+    }
+    
+    .button {
+        position: relative;
+        background-color: white;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5vh; 
+        right: 5vw; 
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem black;
+        text-align: center; 
+        cursor: pointer;
+    }
+    
+    .background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5.5vh; 
+        right: 5.5vw; 
+        background-image: radial-gradient(green, black);
+        z-index: 1000;
+        
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    
+    .nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        z-index: 1500;
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s;
+    }
+    
+    .list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .item {
+        margin: 1rem;
+        font-size: 36px;
+    }
+    
+    .link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .link:not(:last-child) {
+        padding-bottom: 3em;
+    }
+    
+    .link:hover,
+    .link:active {
+        color: lightgreen;
+        cursor: pointer;
+    }
+    
+    .checkbox:checked ~ .background {
+        transform: scale(80);
+    }
+    .checkbox:checked ~ .nav {
+        opacity: 1;
+        width: 100%;
+        right: 0;
+    }
+    
+    .icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .icons,
+    .icons::before,
+    .icons::after {
+        width: 3rem;
+        height: 2px;
+        background-color: gray;
+        display: inline-block;
+    }
+    
+    .icons::before,
+    .icons::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+    }
+    
+    .icons::before {
+        top: -0.8rem;
+    }
+    .icons::after {
+        top: 0.8rem;
+    }
+    
+    .button:hover icons:before {
+        top: -1rem;
+    }
+    .button:hover icons::after {
+        top: 1rem;
+    }
+    
+    .checkbox:checked + .button .icons {
+        background-color: transparent;
+    }
+    
+    .checkbox:checked + .button .icons::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .checkbox:checked + .button .icons::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    li > a.active {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .home > section > section > img {
+        width: 300px;
+    }
+
+    .work-with-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #typing {
+        font-size: 0.6em;
+    }
+
+    section > .img-wrapper > img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .p-wrapper p {
+        font-size: 0.7em;
+    }
+
+    .text {
+        font-size: 1.1em;
+    }
+
+    .mySlides > img {
+        width: 300px;
+    }
+    
+    .projects > h2 {
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    .mySlides {
+        margin-bottom: 1.5em;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .a-links-in-project {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .a-links-in-project a:last-child {
+        width: 95%;
+    }
+
+    .a-links-in-project a {
+        text-align: center;
+    }
+    
+    .certificateSlides > img {
+        width: 300px;
+    }
+
+    .certificateSlides {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .certificate-slideshow > .prev {
+        top: 40%;
+    }
+
+    .certificate-slideshow > .next {
+        top: 40%;
     }
 }

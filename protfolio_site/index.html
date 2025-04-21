@@ -9,6 +9,7 @@
     <script src="script.js"></script>
     <script src="nav.js"></script>
     <script src="copyText.js"></script>
+    <script src="burger.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -43,6 +44,24 @@
                     <p id="typing"></p>
                     <span>|</span>
                 </div>
+            </div>
+            
+            <div class="hamburger">
+                <input type="checkbox" id="navi-toggle" class="checkbox" />
+                <label for="navi-toggle" class="button">
+                    <span class="icons">&nbsp;</span>
+                </label>
+                <div class="background">&nbsp;</div>
+                
+                <nav class="nav">
+                    <ul class="list">
+                        <li class="item"> <a class="link" href="#home"> Home </a> </li>
+                        <li class="item"> <a class="link" href="#about"> About Me</a> </li>
+                        <li class="item"> <a class="link" href="#projects"> Projects </a> </li>
+                        <li class="item"> <a class="link" href="#certificates"> Certificates </a> </li>
+                        <li class="item"> <a class="link" href="#contacts"> Contact </a> </li>
+                    </ul>
+                </nav>
             </div>
         </section>
         
@@ -239,7 +258,7 @@
     </section>
     
     <section class="certificates" id="certificates">
-        <h2>Rosen Ivanov SoftUni certificates</h2>
+        <h2>SoftUni certificates</h2>
         <div class="certificate-slideshow">
             <div class="certificateSlides">
                 <img src="images/Programming Fundamentals with Python - September 2023 - Certificate.png" width="400" alt="">
