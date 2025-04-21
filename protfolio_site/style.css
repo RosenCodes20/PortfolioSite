@@ -6,6 +6,7 @@ html {
 
 body {
     font-family: "Overpass", sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -15,6 +16,10 @@ body {
 
 html {
     box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 *,
@@ -521,4 +526,126 @@ section[class] {
 
 .contacts-wrap > h2 {
     font-size: 2em;
+}
+
+@media (max-width: 1127px) {
+    .h2-wrap {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .p-wrap {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .about-me > section {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .about-me > section img {
+        margin: 1.5em 0;
+    }
+
+    .about-me > section p {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 1050px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    
+    .h1-wrapper {
+        
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    
+    .h1-wrapper {
+        
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .h2-wrap {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .p-wrap {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+    .work-with-wrapper {
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        width: 100%;
+    }
+
+    .about-me > section {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .about-me > section img {
+        margin: 1.5em 0;
+    }
+
+    .about-me > section p {
+        margin-bottom: 1em;
+    }
+
+    .contacts-wrap > p {
+        text-align: center;
+        margin: 0 auto;
+
+    }
 }
