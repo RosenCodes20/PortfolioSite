@@ -18,10 +18,6 @@ html {
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
 *,
 *::before,
 *::after {
@@ -561,11 +557,13 @@ section[class] {
     }
 }
 
+
 @media (max-width: 1050px) {
     header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: static;
     }
     
     h1 {
@@ -881,4 +879,14 @@ section[class] {
     .certificate-slideshow > .next {
         top: 40%;
     }
+}
+
+@media (min-width: 1050px) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+
 }

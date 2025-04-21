@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let navLinks = document.querySelectorAll('ul > li > a');
+    let navLinks = document.querySelectorAll('header > nav > ul > li > a');
     let sections = document.querySelectorAll('section[class]');
     
     window.addEventListener('scroll', handleScrollingInWindow);
