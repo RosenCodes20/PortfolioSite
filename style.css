@@ -532,6 +532,13 @@ section[class] {
     display: none;
 }
 
+footer {
+    background: #6667AB;
+    padding: 1em;
+    text-align: center;
+    color: white;
+}
+
 
 @media (max-width: 1127px) {
     .h2-wrap {
