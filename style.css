@@ -69,13 +69,13 @@ header nav ul li a:hover {
     transition: 0.4s ease-in-out;
 }
 
-header nav ul li:last-child a {
+header nav ul li:nth-child(5) a {
     background: black;
     padding: 0.5em 1.8em;
     border-radius: 1.2em;
 }
 
-header nav ul li:last-child a:hover {
+header nav ul li:nth-child(5) a:hover {
     color: #4999F8;
 }
 
@@ -539,6 +539,13 @@ footer {
     color: white;
 }
 
+select {
+    padding: 0.4em 0.5em;
+    background: #369;
+    color: white;
+    border: 0.2px solid white;
+    border-radius: 0.3em;
+}
 
 @media (max-width: 1127px) {
     .h2-wrap {
@@ -883,5 +890,11 @@ footer {
 @media (max-width: 600px) {
     body, html {
         overflow-x: hidden;
+    }
+}
+
+@media (max-width: 395px) {
+    section:nth-of-type(2) > h2 {
+        font-size: 1.4em !important;
     }
 }
