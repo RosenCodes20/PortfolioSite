@@ -1,4 +1,4 @@
-const texts = ["I'm Rosen Ivanov!", 'I am 16 years old!',  'I am learning to be full stack engineer!', 'Hobbies: Tennis, School, Playing games!'];
+const texts = ["I'm Rosen Ivanov!", 'I am 16 years old!',  'I am learning to be full-stack engineer!', 'Hobbies: Tennis, School, Playing games!'];
 const speed = 100;
 const delay = 1000;
 let index = 0;
