@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
           seventhCertificate: 'Django Advanced - Rosen Ivanov - 6.00/6.00',
           eightCertificate: 'HTML & CSS - Rosen Ivanov - 6.00/6.00',
           ninethCertificate: 'JS Front-End - Rosen Ivanov - 6.00/6.00',
-          contactMeHere: 'Contace me here',
+          contactMeHere: 'Contact me here',
           contactText: 'I am free for new talks about work and making projects together, so if you want you can text me here:',
           footer: '©Rosen Rosenov Ivanov 2025. All rights reserved.'
         },
