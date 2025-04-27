@@ -38,8 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedOption.addEventListener('change', (e) => {
         currentOption = e.target.value;
         texts = textsObj[currentOption];
+        index = 0;
+        textIndex = 0;
+        document.getElementById("typing").innerHTML = "";
     })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    let selectedOption = document.getElementById('sel');
+    selectedOption.addEventListener('change', (e) => {
+        texts = [];
+        currentOption = e.target.value;
+        texts = textsObj[currentOption];
+        index = 0;
+        textIndex = 0;
+        document.getElementById("typing").innerHTML = "";
+    })
+})
+
 
 document.addEventListener("DOMContentLoaded", typeWriter);
 let cIndex = 1;
