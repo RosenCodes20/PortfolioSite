@@ -1,8 +1,15 @@
-const texts = ["I'm Rosen Ivanov!", 'I am 16 years old!',  'I am learning to be full-stack engineer!', 'Hobbies: Tennis, School, Playing games!'];
+
+const textsObj = {
+    'en': ["I'm Rosen Ivanov!", 'I am 16 years old!',  'I am learning to be full-stack engineer!', 'Hobbies: Tennis, School, Playing games!'],
+    'bg': ['Аз съм Росен Иванов!', 'Аз съм на 16 години!', 'Уча се да бъда full-stack инженер!', 'Хобита: Тенис, Училище, Игра на игри!']
+}
 const speed = 100;
 const delay = 1000;
 let index = 0;
 let textIndex = 0;
+let currentOption = 'en';
+let texts = textsObj[currentOption];
+
 
 function typeWriter() {
     if (index < texts[textIndex].length) {
@@ -25,6 +32,14 @@ function deleteText() {
         setTimeout(typeWriter, delay);
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    let selectedOption = document.getElementById('select');
+    selectedOption.addEventListener('change', (e) => {
+        currentOption = e.target.value;
+        texts = textsObj[currentOption];
+    })
+})
 
 document.addEventListener("DOMContentLoaded", typeWriter);
 let cIndex = 1;

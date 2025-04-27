@@ -251,7 +251,7 @@ section:last-child  a {
     padding-bottom: 1em;
 }
 
-.about-me > .a-wrap a {
+.about-me > .a-wrap {
     background: #369;
     color: white;
     text-decoration: none;
@@ -263,7 +263,12 @@ section:last-child  a {
     font-size: 1.2em;
 }
 
-.about-me > .a-wrap a:hover {
+.about-me > .a-wrap a {
+    text-decoration: none;
+    color: white;
+}
+
+.about-me > .a-wrap:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -338,15 +343,15 @@ section:last-child  a {
     border-radius: 0.3em;
 }
 
-.a-links-in-project a:first-child {
+.a-links-in-project .a-link:first-child {
     margin-right: 1em;
 }
 
-.a-links-in-project i {
+.a-links-in-project .a-link i {
     padding-right: 0.3em;
 }
 
-.a-links-in-project a {
+.a-links-in-project .a-link {
     text-decoration: none;
     background: black;
     color: white;
@@ -355,13 +360,21 @@ section:last-child  a {
     transition: ease-in-out 0.2s;
 }
 
-.a-links-in-project a:hover {
+.a-links-in-project .a-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.a-links-in-project .a-link:hover {
     color: #4999F8;
     transition: ease-in-out 0.3s;
 }
 
 .a-links-in-project {
     padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dot, .dots {
@@ -551,6 +564,11 @@ select {
     .h2-wrap {
         margin: 0 auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
     
     .p-wrap {
@@ -647,7 +665,7 @@ select {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1185px) {
     .hamburger {
         display: block;
     }
@@ -850,10 +868,17 @@ select {
         width: 100%;
         gap: 1em;
         justify-content: center;
+        align-items: center;
     }
 
-    .a-links-in-project a:last-child {
-        width: 95%;
+    .a-links-in-project .a-link {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .a-links-in-project .a-link:last-child {
+        width: 99%;
     }
 
     .a-links-in-project a {
@@ -875,6 +900,25 @@ select {
 
     .certificate-slideshow > .next {
         top: 40%;
+    }
+
+    section h2 {
+        text-align: center;
+    }
+
+    .langs {
+        padding-top: 0.8em;
+    }
+
+    .langs > select {
+        padding: 0.5em 0.9em;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 

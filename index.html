@@ -11,22 +11,32 @@
     <script src="copyText.js"></script>
     <script src="burger.js"></script>
     <script src="cv.js"></script>
+    <script src="languages.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         
         <div class="h1-wrapper">
-            <h1>Rosen Ivanov</h1>
+            <h1 data-i18n="title">Rosen Ivanov</h1>
         </div>
         
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#home" class="active" data-i18n="home">Home</a></li>
+                <li><a href="#about" data-i18n="aboutMe">About Me</a></li>
+                <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                <li><a href="#certificates" data-i18n="certificates">Certificates</a></li>
+                <li><a href="#contacts" data-i18n="contact">Contact</a></li>
+                
+                <li>
+                    <div class="langs">
+                        <select name="sel" id="sel">
+                            <option value="en" class="selected">🇬🇧EN</option>
+                            <option value="bg" class="unselected">🇧🇬BG</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
         </nav>
         
@@ -40,7 +50,7 @@
             </section>
             
             <div class="h2-wrap">
-                <h2>Hi, there!</h2>
+                <h2 data-i18n="hiThere">Hi, there!</h2>
                 <div class="p-wrap">
                     <p id="typing"></p>
                     <span>|</span>
@@ -56,11 +66,19 @@
                 
                 <nav class="nav">
                     <ul class="list">
-                        <li class="item"> <a class="link" href="#home"> Home </a> </li>
-                        <li class="item"> <a class="link" href="#about"> About Me</a> </li>
-                        <li class="item"> <a class="link" href="#projects"> Projects </a> </li>
-                        <li class="item"> <a class="link" href="#certificates"> Certificates </a> </li>
-                        <li class="item"> <a class="link" href="#contacts"> Contact </a> </li>
+                        <li class="item"> <a class="link" href="#home" data-i18n="home"> Home </a> </li>
+                        <li class="item"> <a class="link" href="#about" data-i18n="aboutMe"> About Me</a> </li>
+                        <li class="item"> <a class="link" href="#projects" data-i18n="projects"> Projects </a> </li>
+                        <li class="item"> <a class="link" href="#certificates" data-i18n="certificates"> Certificates </a> </li>
+                        <li class="item"> <a class="link" href="#contacts" data-i18n="contact"> Contact </a> </li>
+                        <li>
+                            <div class="langs">
+                                <select name="sel" id="select">
+                                    <option value="en" class="selected">🇬🇧EN</option>
+                                    <option value="bg" class="unselected">🇧🇬BG</option>
+                                </select>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -68,7 +86,7 @@
         
         
         <section>
-            <h2>I am able to work with:</h2>
+            <h2 data-i18n="workWith">I am able to work with:</h2>
             <div class="work-with-wrapper">
                 
                 <a href="https://www.python.org/" target="_blank">
@@ -185,10 +203,10 @@
     </section>
     
     <section class="about-me" id="about">
-        <h2>About Rosen Ivanov</h2>
+        <h2 data-i18n="aboutRosen">About Rosen Ivanov</h2>
         <section>
             <div class="p-wrapper">
-                <p>Hi, I am Rosen Ivanov! I am 16 years old boy from Botevgrad, Bulgaria. I study web programming with django at SoftUni. I want one day to become senior full-stack engineer. I also study programming in programming school. Currently I am a student at NPG po KTS in town Pravets.</p>
+                <p data-i18n="aboutMeInfo">Hi, I am Rosen Ivanov! I am 16 years old boy from Botevgrad, Bulgaria. I study web programming with django at SoftUni. I want one day to become senior full-stack engineer. I also study programming in programming school. Currently I am a student at NPG po KTS in town Pravets.</p>
             </div>
             
             <div class="img-wrapper">
@@ -197,24 +215,29 @@
         </section>
         
         <div class="a-wrap">
-            <a href=""><i class="fa-solid fa-arrow-down"></i>Download my CV</a>
+            <i class="fa-solid fa-arrow-down"></i><a href="" data-i18n="cvBtn">Download my CV</a>
         </div>
     </section>
     
     <section class="projects" id="projects">
-        <h2>Rosen Ivanov projects</h2>
+        <h2 data-i18n="rosenProjects">Rosen Ivanov projects</h2>
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <img src="images/football.png" width="400px" alt="">
                 <div class="text">
-                    <p>This is the football team manager.</p>
-                    <p>Made with Django, used CRUD, authentication with email, authorization and even more interesting things.</p>
-                    <p>I love football very much, so I made this one for my Python-Web Module.</p>
+                    <p data-i18n="firstSlideTextOne">This is the football team manager.</p>
+                    <p data-i18n="firstSlideTextTwo">Made with Django, used CRUD, authentication with email, authorization and even more interesting things.</p>
+                    <p data-i18n="firstSlideTextThree">I love football very much, so I made this one for my Python-Web Module.</p>
                 </div>
                 
                 <div class="a-links-in-project">
-                    <a href="https://github.com/RosenCodes20/Final-Web-Project" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
-                    <a href="https://football-team-manager-a4ftdbe2dvaaffbh.italynorth-01.azurewebsites.net/" target="_blank"><i class="fa-solid fa-eye"></i>Visit Site</a>    
+                    <div class="a-link">
+                        <i class="fa-solid fa-eye"></i><a data-i18n="githubProj" href="https://github.com/RosenCodes20/Final-Web-Project" target="_blank">Project in GitHub</a>
+                    </div>
+                    
+                    <div class="a-link">
+                        <i class="fa-solid fa-eye"></i><a data-i18n="siteLink" href="https://football-team-manager-a4ftdbe2dvaaffbh.italynorth-01.azurewebsites.net/" target="_blank">Visit Site</a>
+                    </div>    
                 </div>
             </div>
             
@@ -222,14 +245,16 @@
                 <img src="images/fast_unit.png" width="400" alt="">
                 
                 <div class="text">
-                    <p>This is the fast unit exercise made by me</p>
-                    <p>Its work is to generate a students to teachers who will test students.</p>
-                    <p>One of my biggest projects for school, because it will be used for a long time.</p>
-                    <p>With that project my journey with getting better started and I am so happy to show it to you :)</p>
+                    <p data-i18n="secondSlideTextOne">This is the fast unit exercise made by me</p>
+                    <p data-i18n="secondSlideTextTwo">Its work is to generate a students to teachers who will test students.</p>
+                    <p data-i18n="secondSlideTextThree">One of my biggest projects for school, because it will be used for a long time.</p>
+                    <p data-i18n="secondSlideTextFour">With that project my journey with getting better started and I am so happy to show it to you :)</p>
                 </div>
                 
                 <div class="a-links-in-project">
-                    <a href="https://github.com/RosenCodes20/Python-OOP/tree/main/fast_unit" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
+                    <div class="a-link">
+                        <i class="fa-solid fa-eye"></i><a data-i18n="githubProj" href="https://github.com/RosenCodes20/Final-Web-Project" target="_blank">Project in GitHub</a>
+                    </div>
                 </div>
             </div>
             
@@ -237,13 +262,15 @@
                 <img src="images/softuniada_project.png" width="400" alt="">
                 
                 <div class="text">
-                    <p>This is my bottle shop for the competition softuniada.</p>
-                    <p>At first I made this for my mother but then liked it and wanted to compete with it.</p>
-                    <p>This is one of my biggest project and one that I like the most!</p>
+                    <p data-i18n="thirdSlideTextOne">This is my bottle shop for the competition softuniada.</p>
+                    <p data-i18n="thirdSlideTextTwo">At first I made this for my mother but then liked it and wanted to compete with it.</p>
+                    <p data-i18n="thirdSlideTextThree">This is one of my biggest project and one that I like the most!</p>
                 </div>
                 
                 <div class="a-links-in-project">
-                    <a href="https://github.com/RosenCodes20/Python-OOP/tree/main/softuniada_project" target="_blank"><i class="fa-solid fa-eye"></i>Project in GitHub</a>
+                    <div class="a-link">
+                        <i class="fa-solid fa-eye"></i><a data-i18n="githubProj" href="https://github.com/RosenCodes20/Final-Web-Project" target="_blank">Project in GitHub</a>
+                    </div>
                 </div>
             </div>
             
@@ -259,51 +286,51 @@
     </section>
     
     <section class="certificates" id="certificates">
-        <h2>SoftUni certificates</h2>
+        <h2 data-i18n="softCert">SoftUni certificates</h2>
         <div class="certificate-slideshow">
             <div class="certificateSlides">
                 <img src="images/Programming Fundamentals with Python - September 2023 - Certificate.png" width="400" alt="">
-                <h2>Programming Fundamentals with Python - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="firstCertificate">Programming Fundamentals with Python - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/Python Advanced - January 2024 - Certificate.png" width="400" alt="">
-                <h2>Python Advanced - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="secondCertificate">Python Advanced - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/Python OOP - February 2024 - Certificate.png" width="400" alt="">
-                <h2>Python OOP - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="thirdCertificate">Python OOP - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/PostgreSQL - May 2024 - Certificate.png" width="400" alt="">
-                <h2>PostgreSQL - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="fourthCertificate">PostgreSQL - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/Python ORM - June 2024 - Certificate.png" width="400" alt="">
-                <h2>Python ORM - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="fifthCertificate">Python ORM - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/Django Basics - September 2024 - Certificate.png" width="400" alt="">
-                <h2>Django Basics - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="sixthCertificate">Django Basics - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/Django Advanced - October 2024 - Certificate.png" width="400" alt="">
-                <h2>Django Advanced - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="seventhCertificate">Django Advanced - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/HTML & CSS - January 2025 - Certificate.png" width="400" alt="">
-                <h2>HTML & CSS - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="eightCertificate">HTML & CSS - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <div class="certificateSlides">
                 <img src="images/JS Front-End - February 2025 - Certificate.png" width="400" alt="">
-                <h2>JS Front-End - Rosen Ivanov - 6.00/6.00</h2>
+                <h2 data-i18n="ninethCertificate">JS Front-End - Rosen Ivanov - 6.00/6.00</h2>
             </div>
             
             <a class="prev" onclick="plusCertificateSlides(-1)">&#10094;</a>
@@ -325,8 +352,8 @@
     
     <section class="contacts" id="contacts">
         <div class="contacts-wrap">
-            <h2>Contact me here</h2>
-            <p>I am free for new talks about work and making projects together, so if you want you can text me here:</p>
+            <h2 data-i18n="contactMeHere">Contact me here</h2>
+            <p data-i18n="contactText">I am free for new talks about work and making projects together, so if you want you can text me here:</p>
             <div class="a-links">
                 <a href="https://www.instagram.com/rosko.r.i.6/">
                     <div class="instagram icon">
@@ -372,9 +399,9 @@
             </div>
         </div>
     </section>
-
+    
     <footer>
-        <p>&copy;Rosen Rosenov Ivanov 2025. All rights reserved.</p>
+        <p data-i18n="footer">&copy;Rosen Rosenov Ivanov 2025. All rights reserved.</p>
     </footer>
     
 </body>

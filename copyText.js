@@ -27,5 +27,5 @@ function copyGmail() {
 
     currentInput.remove();
 
-    alert(`Copied the email: ${gmail}!`)
+    alert(`Copied the email: ${gmail}!`);
 }

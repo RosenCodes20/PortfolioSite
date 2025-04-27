@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cv.addEventListener('click', handleClickingCv);
 
     function handleClickingCv() {
-        alert("Still dont't have, but coming soon.....")
+        alert("Still dont't have, but coming soon.....");
     }
 })
