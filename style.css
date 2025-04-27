@@ -560,6 +560,10 @@ select {
     border-radius: 0.3em;
 }
 
+#select {
+    display: none;
+}
+
 @media (max-width: 1127px) {
     .h2-wrap {
         margin: 0 auto;
@@ -674,6 +678,13 @@ select {
         display: none;
     }
     
+    #sel {
+        display: none;
+    }
+
+    #select {
+        display: inline-block;
+    }
     
     .checkbox {
         display: none;
@@ -811,6 +822,10 @@ select {
     li > a.active {
         border-bottom: none;
     }
+
+    #select {
+        padding: 0.5em 0.9em;
+    }
 }
 
 @media (max-width: 450px) {
@@ -908,10 +923,6 @@ select {
 
     .langs {
         padding-top: 0.8em;
-    }
-
-    .langs > select {
-        padding: 0.5em 0.9em;
     }
 
     .list {
