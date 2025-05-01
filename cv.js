@@ -1,36 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     let cv = document.querySelector('.a-wrap > a');
-    
-    const languageSelector = document.getElementById('sel');
 
-    const languageSelectorTwo = document.getElementById('select');
-    
-    languageSelector.addEventListener('change', (e) => {
-        cv.addEventListener('click', handleClickingCv);
-        
-        function handleClickingCv() {
-            const selectedLang = e.target.value;
-            
-            if (selectedLang == 'en') {
-                alert("Still dont't have, but coming soon.....");
-            } else if (selectedLang == 'bg') {
-                alert('Още нямам, но очаквайте скоро.......')
-            }
-        }
-    })
+    cv.addEventListener('click', handleClickingCv);
 
-    languageSelectorTwo.addEventListener('change', (e) => {
-        cv.addEventListener('click', handleClickingCv);
-        
-        function handleClickingCv() {
-            const selectedLang = e.target.value;
-            
-            if (selectedLang == 'en') {
-                alert("Still dont't have, but coming soon.....");
-            } else if (selectedLang == 'bg') {
-                alert('Още нямам, но очаквайте скоро.......')
-            }
+    function handleClickingCv() {
+        let selectedLang = null;
+        const selElement = document.getElementById('sel');
+        const selectElement = document.getElementById('select');
+    
+        if (selElement && window.getComputedStyle(selElement).display !== 'none') {
+            selectedLang = selElement.value;
+        } else if (selectElement && window.getComputedStyle(selectElement).display !== 'none') {
+            selectedLang = selectElement.value;
         }
-    })
+        
+        if (selectedLang == 'en') {
+            alert("Still dont't have, but coming soon.....");
+        } else if (selectedLang == 'bg') {
+            alert('Още нямам, но очаквайте скоро.......')
+        }
+    }
+    
 }        
 )
