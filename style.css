@@ -128,9 +128,7 @@ header nav ul li:nth-child(5) a:hover {
 }
 
 .p-wrap span {
-    font-size: 1.1em;
-    font-family: serif;
-    margin-left: 0.02em;
+    font-size: 0.7em;
 }
 
 .home section:last-child {
