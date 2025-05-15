@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (selectedLang == 'en') {
-            alert("Still dont't have, but coming soon.....");
+            alert("Still don't have, but coming soon.....");
         } else if (selectedLang == 'bg') {
             alert('Още нямам, но очаквайте скоро.......')
         }
