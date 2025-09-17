@@ -550,6 +550,7 @@ footer {
     padding: 1em;
     text-align: center;
     color: white;
+    bottom: env(safe-area-inset-bottom);
 }
 
 select {
