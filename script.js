@@ -1,7 +1,7 @@
 
 const textsObj = {
-    'en': ["I'm Rosen Ivanov!", 'I am 16 years old!',  'I am learning to be full-stack engineer!', 'Hobbies: Tennis, School, Playing games!'],
-    'bg': ['Аз съм Росен Иванов!', 'Аз съм на 16 години!', 'Уча се да бъда full-stack инженер!', 'Хобита: Тенис, Училище, Игра на игри!']
+    'en': ["I'm Rosen Ivanov!", 'I am 17 years old!',  'I am learning to be full-stack engineer!', 'Hobbies: Tennis, School, Playing games!'],
+    'bg': ['Аз съм Росен Иванов!', 'Аз съм на 17 години!', 'Уча се да бъда full-stack инженер!', 'Хобита: Тенис, Училище, Игра на игри!']
 }
 const speed = 100;
 const delay = 1000;
