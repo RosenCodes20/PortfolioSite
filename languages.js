@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ninethCertificate: 'JS Front-End - Rosen Ivanov - 6.00/6.00',
           contactMeHere: 'Contact me here',
           contactText: 'I am free for new talks about work and making projects together, so if you want you can text me here:',
-          footer: '©Rosen Rosenov Ivanov 2025. All rights reserved.'
+          footer: '©Rosen Rosenov Ivanov 2026. All rights reserved.'
         },
         bg: {
           title: "Росен Иванов",
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ninethCertificate: 'JS Front-End - Росен Иванов - 6.00/6.00',
           contactMeHere: 'Свържете се с мен тук',
           contactText: 'Свободен съм за нови разговори за работа и правене на съвместни проекти, така че ако искате можете да ми пишете тук:',
-          footer: '©Росен Росенов Иванов 2025. Всички права запазени.',
+          footer: '©Росен Росенов Иванов 2026. Всички права запазени.',
         }
       };
     
